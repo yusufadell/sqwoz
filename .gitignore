@@ -1,0 +1,10 @@
+/.vscode
+/categories
+/coupons
+/db.sqlite3
+/manage.py
+/memberships
+/orders
+/payments
+/products
+/valuable
