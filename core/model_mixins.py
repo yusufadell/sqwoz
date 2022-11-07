@@ -37,8 +37,7 @@ class DiscountMixin(models.Model):
         blank=True,
         null=True,
     )
-    is_redeem_allowed = models.BooleanField(
-        _("Is Redeem Allowed"), default=False)
+    is_redeem_allowed = models.BooleanField(_("Is Redeem Allowed"), default=False)
 
     class Meta:
         abstract = True
