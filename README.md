@@ -1,6 +1,6 @@
-# Valuable
+# Sqwoz
 
-## A Product Pricing API
+## A Psqwozroduct Pricing API
 
 >It's all about Offers, Deals, and Discounts
 
@@ -27,7 +27,7 @@
 >Based on the three types of offers, we’ll divide the data model into three subjecta reas:
 
 - Product Pricing and Discounts
-TODO: Add a diagram
+![Product Pricing and Discounts](./assets/product.png)
 
 - Loyalty Reward Scheme
 TODO: Add a diagram
