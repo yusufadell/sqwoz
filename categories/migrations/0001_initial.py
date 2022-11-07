@@ -25,7 +25,8 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "name",
-                    models.CharField(max_length=100, verbose_name="Category Name"),
+                    models.CharField(
+                        max_length=100, verbose_name="Category Name"),
                 ),
                 (
                     "max_reward_points_encash",

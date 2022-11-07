@@ -105,15 +105,18 @@ class Migration(migrations.Migration):
                 ("name", models.CharField(max_length=100, verbose_name="Product Name")),
                 (
                     "description",
-                    models.TextField(blank=True, verbose_name="Product Description"),
+                    models.TextField(
+                        blank=True, verbose_name="Product Description"),
                 ),
                 (
                     "unit_in_stock",
-                    models.IntegerField(default=0, verbose_name="Units in Stock"),
+                    models.IntegerField(
+                        default=0, verbose_name="Units in Stock"),
                 ),
                 (
                     "reward_points_credit",
-                    models.IntegerField(default=0, verbose_name="Reward Points Credit"),
+                    models.IntegerField(
+                        default=0, verbose_name="Reward Points Credit"),
                 ),
                 ("summary", models.TextField(blank=True, null=True)),
                 ("featured", models.BooleanField(default=False)),
@@ -162,7 +165,8 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "in_active",
-                    models.BooleanField(default=True, verbose_name="In Active"),
+                    models.BooleanField(
+                        default=True, verbose_name="In Active"),
                 ),
                 (
                     "product",

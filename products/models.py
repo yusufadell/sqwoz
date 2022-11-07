@@ -9,7 +9,8 @@ class Product(models.Model):
     name = models.CharField(_("Product Name"), max_length=100)
     description = models.TextField(_("Product Description"), blank=True)
     unit_in_stock = models.IntegerField(_("Units in Stock"), default=0)
-    reward_points_credit = models.IntegerField(_("Reward Points Credit"), default=0)
+    reward_points_credit = models.IntegerField(
+        _("Reward Points Credit"), default=0)
     # category = models.ForeignKey("Category", verbose_name=_("Category"))
     discount = models.ForeignKey(
         "Discount",
@@ -37,9 +38,11 @@ class Pricing(models.Model):
         on_delete=models.CASCADE,
         related_name="pricing",
     )
-    base_price = models.DecimalField(_("Base Price"), max_digits=10, decimal_places=2)
+    base_price = models.DecimalField(
+        _("Base Price"), max_digits=10, decimal_places=2)
     date_created = models.DateTimeField(_("Date Created"), auto_now_add=True)
-    date_expired = models.DateTimeField(_("Date Expired"), blank=True, null=True)
+    date_expired = models.DateTimeField(
+        _("Date Expired"), blank=True, null=True)
 
     in_active = models.BooleanField(_("In Active"), default=True)
 
