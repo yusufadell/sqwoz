@@ -10,25 +10,30 @@ class DiscountMixin(models.Model):
         max_digits=10,
         decimal_places=2,
         default=0,
-        validators=[MinValueValidator(0), MaxValueValidator(100)],
+        validators=[MinValueValidator(0),
+                    MaxValueValidator(100)],
     )
-    discount_unit = models.CharField(
-        _("Discount Unit"), max_length=1, choices=(("P", "Percentage"), ("A", "Amount"))
-    )
+    discount_unit = models.CharField(_("Discount Unit"),
+                                     max_length=1,
+                                     choices=(("P", "Percentage"), ("A",
+                                                                    "Amount")))
     date_created = models.DateTimeField(_("Date Created"), auto_now_add=True)
-    valid_unit = models.CharField(
-        _("Valid Unit"), max_length=1, choices=(("D", "Day"),)
-    )
+    valid_unit = models.CharField(_("Valid Unit"),
+                                  max_length=1,
+                                  choices=(("D", "Day"), ))
     valid_value = models.IntegerField(_("Valid Value"))
-    coupon_code = models.CharField(
-        _("Coupon Code"), max_length=100, blank=True, null=True
-    )
-    discount_value = models.DecimalField(
-        _("Discount Value"), max_digits=10, decimal_places=2
-    )
-    minimum_order_value = models.DecimalField(
-        _("Minimum Order Value"), max_digits=10, decimal_places=2, blank=True, null=True
-    )
+    coupon_code = models.CharField(_("Coupon Code"),
+                                   max_length=100,
+                                   blank=True,
+                                   null=True)
+    discount_value = models.DecimalField(_("Discount Value"),
+                                         max_digits=10,
+                                         decimal_places=2)
+    minimum_order_value = models.DecimalField(_("Minimum Order Value"),
+                                              max_digits=10,
+                                              decimal_places=2,
+                                              blank=True,
+                                              null=True)
     maximum_discount_amount = models.DecimalField(
         _("Maximum Discount Amount"),
         max_digits=10,
@@ -36,7 +41,8 @@ class DiscountMixin(models.Model):
         blank=True,
         null=True,
     )
-    is_redeem_allowed = models.BooleanField(_("Is Redeem Allowed"), default=False)
+    is_redeem_allowed = models.BooleanField(_("Is Redeem Allowed"),
+                                            default=False)
 
     class Meta:
         abstract = True
@@ -60,7 +66,6 @@ class DiscountMixin(models.Model):
 
 #     class Meta:
 #         abstract = True
-
 
 # class CategoryMixin(models.Model):
 #     name = models.CharField(_("Category Name"), max_length=100)

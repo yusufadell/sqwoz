@@ -8,8 +8,7 @@ from core.model_mixins import DiscountMixin
 class Category(models.Model):
     name = models.CharField(_("Category Name"), max_length=100)
     max_reward_points_encash = models.IntegerField(
-        _("Max Reward Points Encash"), default=0
-    )
+        _("Max Reward Points Encash"), default=0)
     parent_category = models.ForeignKey(
         "self",
         verbose_name=_("Parent Category"),

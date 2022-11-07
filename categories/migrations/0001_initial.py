@@ -25,13 +25,13 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "name",
-                    models.CharField(max_length=100, verbose_name="Category Name"),
+                    models.CharField(max_length=100,
+                                     verbose_name="Category Name"),
                 ),
                 (
                     "max_reward_points_encash",
                     models.IntegerField(
-                        default=0, verbose_name="Max Reward Points Encash"
-                    ),
+                        default=0, verbose_name="Max Reward Points Encash"),
                 ),
                 (
                     "parent_category",
@@ -67,17 +67,17 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "date_created",
-                    models.DateTimeField(
-                        auto_now_add=True, verbose_name="Date Created"
-                    ),
+                    models.DateTimeField(auto_now_add=True,
+                                         verbose_name="Date Created"),
                 ),
                 (
                     "valid_unit",
-                    models.CharField(
-                        choices=[("D", "Day")], max_length=1, verbose_name="Valid Unit"
-                    ),
+                    models.CharField(choices=[("D", "Day")],
+                                     max_length=1,
+                                     verbose_name="Valid Unit"),
                 ),
-                ("valid_value", models.IntegerField(verbose_name="Valid Value")),
+                ("valid_value",
+                 models.IntegerField(verbose_name="Valid Value")),
                 (
                     "coupon_code",
                     models.CharField(
@@ -89,9 +89,9 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "discount_value",
-                    models.DecimalField(
-                        decimal_places=2, max_digits=10, verbose_name="Discount Value"
-                    ),
+                    models.DecimalField(decimal_places=2,
+                                        max_digits=10,
+                                        verbose_name="Discount Value"),
                 ),
                 (
                     "minimum_order_value",
@@ -115,9 +115,8 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "is_redeem_allowed",
-                    models.BooleanField(
-                        default=False, verbose_name="Is Redeem Allowed"
-                    ),
+                    models.BooleanField(default=False,
+                                        verbose_name="Is Redeem Allowed"),
                 ),
                 (
                     "category",

@@ -33,17 +33,17 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "date_created",
-                    models.DateTimeField(
-                        auto_now_add=True, verbose_name="Date Created"
-                    ),
+                    models.DateTimeField(auto_now_add=True,
+                                         verbose_name="Date Created"),
                 ),
                 (
                     "valid_unit",
-                    models.CharField(
-                        choices=[("D", "Day")], max_length=1, verbose_name="Valid Unit"
-                    ),
+                    models.CharField(choices=[("D", "Day")],
+                                     max_length=1,
+                                     verbose_name="Valid Unit"),
                 ),
-                ("valid_value", models.IntegerField(verbose_name="Valid Value")),
+                ("valid_value",
+                 models.IntegerField(verbose_name="Valid Value")),
                 (
                     "coupon_code",
                     models.CharField(
@@ -55,9 +55,9 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "discount_value",
-                    models.DecimalField(
-                        decimal_places=2, max_digits=10, verbose_name="Discount Value"
-                    ),
+                    models.DecimalField(decimal_places=2,
+                                        max_digits=10,
+                                        verbose_name="Discount Value"),
                 ),
                 (
                     "minimum_order_value",
@@ -81,9 +81,8 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "is_redeem_allowed",
-                    models.BooleanField(
-                        default=False, verbose_name="Is Redeem Allowed"
-                    ),
+                    models.BooleanField(default=False,
+                                        verbose_name="Is Redeem Allowed"),
                 ),
             ],
             options={
@@ -102,18 +101,23 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("name", models.CharField(max_length=100, verbose_name="Product Name")),
+                ("name",
+                 models.CharField(max_length=100,
+                                  verbose_name="Product Name")),
                 (
                     "description",
-                    models.TextField(blank=True, verbose_name="Product Description"),
+                    models.TextField(blank=True,
+                                     verbose_name="Product Description"),
                 ),
                 (
                     "unit_in_stock",
-                    models.IntegerField(default=0, verbose_name="Units in Stock"),
+                    models.IntegerField(default=0,
+                                        verbose_name="Units in Stock"),
                 ),
                 (
                     "reward_points_credit",
-                    models.IntegerField(default=0, verbose_name="Reward Points Credit"),
+                    models.IntegerField(default=0,
+                                        verbose_name="Reward Points Credit"),
                 ),
                 ("summary", models.TextField(blank=True, null=True)),
                 ("featured", models.BooleanField(default=False)),
@@ -144,25 +148,25 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "base_price",
-                    models.DecimalField(
-                        decimal_places=2, max_digits=10, verbose_name="Base Price"
-                    ),
+                    models.DecimalField(decimal_places=2,
+                                        max_digits=10,
+                                        verbose_name="Base Price"),
                 ),
                 (
                     "date_created",
-                    models.DateTimeField(
-                        auto_now_add=True, verbose_name="Date Created"
-                    ),
+                    models.DateTimeField(auto_now_add=True,
+                                         verbose_name="Date Created"),
                 ),
                 (
                     "date_expired",
-                    models.DateTimeField(
-                        blank=True, null=True, verbose_name="Date Expired"
-                    ),
+                    models.DateTimeField(blank=True,
+                                         null=True,
+                                         verbose_name="Date Expired"),
                 ),
                 (
                     "in_active",
-                    models.BooleanField(default=True, verbose_name="In Active"),
+                    models.BooleanField(default=True,
+                                        verbose_name="In Active"),
                 ),
                 (
                     "product",
